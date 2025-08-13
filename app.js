@@ -1,0 +1,28 @@
+require("dotenv").config();
+const express = require("express");
+const PORT  = process.env.PORT;
+const membreRoutes = require("./routes/membres.route")
+const tachesRoutes = require("./routes/taches.route")
+const app = express();
+app.use(express.json());
+
+//api pour les membres
+app.use("/api/membre",membreRoutes)
+
+//api pour les taches
+app.use("/api/taches",tachesRoutes)
+
+
+app.get("/",(req,res)=>{
+    res.send("la gestion des taches!")
+});
+
+
+
+
+
+
+
+app.listen(PORT,()=>{
+    console.log(`le server demarre sur http://localhost:${PORT}`)
+})
