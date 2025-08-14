@@ -1,13 +1,14 @@
 const express = require("express");
 const route = express.Router();
 const tacheControllers = require("../controllers/taches.controller")
+const auth = require("../middlewares/auth.midd")
 
 
 //la fonction pour enregistre une tache
-route.post("/",tacheControllers.createTaches)
+route.post("/",auth,tacheControllers.createTaches)
 
 // la route pour filter
-route.get("/",tacheControllers.readTaches)
+route.get("/",auth,tacheControllers.readTaches)
 
 //la route pour afficher une tache
 route.get("/:id",tacheControllers.readTache)

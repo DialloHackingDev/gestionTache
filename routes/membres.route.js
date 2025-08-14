@@ -8,7 +8,7 @@ route.post("/",membreControllers.createMembres)
 
 
 //la fonction pour afficher tous les membres
-route.get("/",auth,membreControllers.readMembres)
+route.get("/",membreControllers.readMembres)
 
 
 
