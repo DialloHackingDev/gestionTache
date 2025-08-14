@@ -1,6 +1,6 @@
 const express = require("express");
 const router = express.Router();
-const membreControllers = require("../controllers/membre.controller")
+const membreControllers = require("../controllers/membrecontroller")
 const auth = require("../middlewares/auth.midd")
 
 //la fonction pour enregistre un memebre

@@ -1,8 +1,8 @@
 require("dotenv").config();
 const express = require("express");
 const PORT  = process.env.PORT || 3000;
-const membreRoutes = require("./routes/membres.route")
-const tachesRoutes = require("./routes/taches.route")
+const membreRoutes = require("./routes/membresroute")
+const tachesRoutes = require("./routes/tachesroute")
 const {logger} = require("./middlewares/logger");
 const cors = require("cors")
 

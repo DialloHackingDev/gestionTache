@@ -1,4 +1,4 @@
-const mongoose = require("../db/connect.db");
+const mongoose = require("../db/connectdb");
 
 //creation du schema des membres
 const membreSchema = mongoose.Schema({
