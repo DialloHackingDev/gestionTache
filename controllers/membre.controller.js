@@ -39,7 +39,7 @@ exports.readMembres = async(req,res)=>{
         
         const user = await Membres.find()
         console.log(user.length)
-        if(!user.length === 0) return res.status(401).json({message:"l'utilisateur n'est pas trouve!"})
+        if(user.length === 0) return res.status(401).json({message:"l'utilisateur n'est pas trouve!"})
 
         return res.status(201).json(user)
         

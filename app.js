@@ -1,6 +1,6 @@
 require("dotenv").config();
 const express = require("express");
-const PORT  = process.env.PORT;
+const PORT  = process.env.PORT || 3000;
 const membreRoutes = require("./routes/membres.route")
 const tachesRoutes = require("./routes/taches.route")
 const {logger} = require("./middlewares/logger");
@@ -26,9 +26,6 @@ app.get("/",(req,res)=>{
 
 
 
-
-
-
 app.listen(PORT,()=>{
-    console.log(`le server demarre sur http://localhost:${PORT}`)
+    console.log(`le server ecoute sur le port ${PORT}`)
 })
