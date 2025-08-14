@@ -1,37 +1,37 @@
 const express = require("express");
-const route = express.Router();
+const router = express.Router();
 const membreControllers = require("../controllers/membre.controller")
 const auth = require("../middlewares/auth.midd")
 
 //la fonction pour enregistre un memebre
-route.post("/",membreControllers.createMembres)
+router.post("/",membreControllers.createMembres)
 
 
 //la fonction pour afficher tous les membres
-route.get("/",membreControllers.readMembres)
+router.get("/",membreControllers.readMembres)
 
 
 
 
 //la fonction pour afficher un memebre
-route.get("/:id",membreControllers.readMembre)
+router.get("/:id",membreControllers.readMembre)
 
 
 
 
 //la fonctions pour modifier un membre
-route.put("/:id",membreControllers.updateMembre)
+router.put("/:id",membreControllers.updateMembre)
 
 
 
 // la fonction pour supprimer un membres$
-route.delete("/:id",membreControllers.deleteMembre)
+router.delete("/:id",membreControllers.deleteMembre)
 
 
 
 //la route pour se connecter
-route.post("/login",membreControllers.loginUsers)
+router.post("/login",membreControllers.loginUsers)
 
 
 
-module.exports = route;
+module.exports = router;

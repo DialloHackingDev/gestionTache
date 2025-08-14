@@ -4,9 +4,12 @@ const PORT  = process.env.PORT;
 const membreRoutes = require("./routes/membres.route")
 const tachesRoutes = require("./routes/taches.route")
 const {logger} = require("./middlewares/logger");
+const cors = require("cors")
 
 const app = express();
 app.use(express.json());
+app.use(cors());
+
 app.use(logger)
 
 //api pour les membres
